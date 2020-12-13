@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Details</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main-element">
+        <form action="">
+        <header>
+            <h1>Customer Details:</h1>
+        </header>
+        <hr/>
+        <!-- Full name section -->
+        <section class="card">
+            <h2 class="cardTitle">Full name <span class='req-filed'>*</span></h2>
+            <div class="half-item">
+                <input type="text" name="first_name" id="fName">
+                <label for="first_name">First Name</label>
+            </div>
+            <div class="placeHolderError">
+                <span class="errorSign"></span>
+                <span class="errorText"></span>
+            </div>
+        </section>
+        <!-- end full name section -->
+
+        <!-- address section -->
+        <section class="card">
+            <h2 class="cardTitle">Address <span class='req-filed'>*</span></h2>
+            <div class="full-item">
+                <input type="text" name="streetAddress" id="stAddress">
+                <label for="streetAddress">Street Address</label>
+            </div>
+            <div class="full-item">
+                <input type="text" name="streetAddress2" id="stAddress2">
+                <label for="streetAddress2">Street Address Line 2</label>
+            </div>
+            <div class="half-item">
+                <input type="text" name="city" id="city">
+                <label for="city">City</label>
+            </div>
+            <div class="half-item">
+                <input type="text" name="state-province" id="state">
+                <label for="state-province">State/ Province</label>
+            </div>
+            <div class="full-item">
+                <input type="text" name="postal" id="postal">
+                <label for="postal">Postal / Zip Code</label>
+            </div>
+            <div class="placeHolderError">
+                <span class="errorSign"></span>
+                <span class="errorText"></span>
+            </div>
+        </section>
+        <!-- end address section -->
+
+        <!-- phone number section -->
+        <section class="card">
+            <h2 class="cardTitle">Phone number <span class='req-filed'>*</span></h2>
+            <div class="half-item">
+                <input type="text" name="phoneNum" id="phoneNumber">
+            </div>
+            <div class="placeHolderError">
+                <span class="errorSign"></span>
+                <span class="errorText"></span>
+            </div>
+        </section>
+        <!-- end phone number section -->
+
+        <!-- email section -->
+        <section class="card">
+            <h2 class="cardTitle">E-mail</h2>
+            <div class="half-item">
+                <input type="text" name="email" id="email">
+                <label for="email">example@example.com</label>
+            </div>
+            <div class="placeHolderError">
+                <span class="errorSign"></span>
+                <span class="errorText"></span>
+            </div>
+        </section>
+        <!--end email section -->
+        
+        <!-- dropdown menu-how did you hear about us -->
+        <section class="card">
+            <h2 class="cardTitle">How did you hear about us? <span class='req-filed'>*</span></h2>
+            <div class="half-item">
+                <select  >
+                    <option>None</option>
+                    <option>Newspaper</option>
+                    <option>Internet</option>
+                    <option>Magazine</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="placeHolderError">
+                <span class="errorSign"></span>
+                <span class="errorText"></span>
+            </div>
+        </section>
+        <!-- end dropdown menu-how did you hear about us -->
+        
+        <!-- other -->
+        <section class="card">
+            <h2 class="cardTitle">Other <span class='req-filed'>*</span></h2>
+            <div class="half-item">
+                <input type="text" name="" id="">
+                <label for=""></label>
+            </div>
+            <div class="placeHolderError">
+                <span class="errorSign"></span>
+                <span class="errorText"></span>
+            </div>
+        </section>
+        <!-- end other -->
+        
+        <!-- feedback -->
+        <section class="card">
+            <h2 class="cardTitle">Feedback about us:</h2>
+            <div class="full-item">
+                <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+            </div>
+        </section>
+        <!-- end feedback -->
+        
+        <!-- suggestions -->
+        <section class="card">
+            <h2 class="cardTitle"></h2>
+            <div class="full-item">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+        </section>
+        <!-- end suggestions -->
+
+        <!-- recommended -->
+        <section class="card">
+            <h2 class="cardTitle"></h2>
+            <div class="half-item">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+            </div>
+            <div class="placeHolderError">
+                <span class="errorSign"></span>
+                <span class="errorText"></span>
+            </div>
+        </section>
+        <!-- end recommended -->
+        
+        <!-- table -->
+        <table>
+            <tr>
+                <th></th>
+                <th>Full name</th>
+                <th>Address</th>
+                <th>Contact number</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <!-- end table -->
+        <hr>
+        <button type="submit">Submit</button>
+        <!-- end form -->
+    </form>
+    </main>
+    
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
