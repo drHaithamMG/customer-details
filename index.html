@@ -21,14 +21,14 @@
             </header>
             <hr/>
             <!-- Full name section -->
-            <section class="card">
-                <h2 class="cardTitle">Full name <span class='req-filed'>*</span></h2>
+            <section class="input-placeHolder">
+                <h2 class="inputPlaceHolderTitle">Full name <span class='req-filed'>*</span></h2>
                 <div class="half-item">
-                    <input type="text" name="first_name" id="fName">
+                    <input class ="checkEneteredChar" type="text" name="first_name" id="fName">
                     <label for="first_name">First Name</label>
                 </div>
                 <div class="half-item">
-                    <input type="text" name="last_name" id="lName">
+                    <input class ="checkEneteredChar" type="text" name="last_name" id="lName">
                     <label for="last_name">Last Name</label>
                 </div>
                 <div class="placeHolderError">
@@ -39,8 +39,8 @@
             <!-- end full name section -->
 
             <!-- address section -->
-            <section class="card">
-                <h2 class="cardTitle">Address <span class='req-filed'>*</span></h2>
+            <section class="inputPlaceHolder">
+                <h2 class="inputPlaceHolderTitle">Address <span class='req-filed'>*</span></h2>
                 <div class="full-item">
                     <input type="text" name="streetAddress" id="stAddress">
                     <label for="streetAddress">Street Address</label>
@@ -50,7 +50,7 @@
                     <label for="streetAddress2">Street Address Line 2</label>
                 </div>
                 <div class="half-item">
-                    <input type="text" name="city" id="city">
+                    <input class ="city" type="text" name="city" id="city">
                     <label for="city">City</label>
                 </div>
                 <div class="half-item">
@@ -58,7 +58,7 @@
                     <label for="state-province">State/ Province</label>
                 </div>
                 <div class="full-item">
-                    <input type="text" name="postal" id="postal">
+                    <input class ='number' type="text" name="postal" id="postal">
                     <label for="postal">Postal / Zip Code</label>
                 </div>
                 <div class="placeHolderError">
@@ -69,10 +69,10 @@
             <!-- end address section -->
 
             <!-- phone number section -->
-            <section class="card">
-                <h2 class="cardTitle">Phone number <span class='req-filed'>*</span></h2>
+            <section class="inputPlaceHolder">
+                <h2 class="inputPlaceHolderTitle">Phone number <span class='req-filed'>*</span></h2>
                 <div class="half-item">
-                    <input type="text" name="phoneNum" id="phoneNumber">
+                    <input class ='number' placeholder="(000) 000-0000" type="text" name="phoneNum" id="phoneNumber">
                 </div>
                 <div class="placeHolderError">
                     <span class="errorSign"></span>
@@ -82,10 +82,10 @@
             <!-- end phone number section -->
 
             <!-- email section -->
-            <section class="card">
-                <h2 class="cardTitle">E-mail</h2>
+            <section class="inputPlaceHolder">
+                <h2 class="inputPlaceHolderTitle">E-mail</h2>
                 <div class="half-item">
-                    <input type="text" name="email" id="email">
+                    <input class="email-validation" type="text" name="email" id="email">
                     <label for="email">example@example.com</label>
                 </div>
                 <div class="placeHolderError">
@@ -96,16 +96,16 @@
             <!--end email section -->
 
             <!-- dropdown menu-how did you hear about us -->
-            <section class="card">
-                <h2 class="cardTitle">How did you hear about us? <span class='req-filed'>*</span></h2>
+            <section class="inputPlaceHolder">
+                <h2 class="inputPlaceHolderTitle">How did you hear about us? <span class='req-filed'>*</span></h2>
                 <div class="half-item">
-                    <select>
-                    <option value="" disabled selected hidden>Please Select</option>
-                    <option value="0">None</option>
-                    <option value="1">Newspaper</option>
-                    <option value="2">Internet</option>
-                    <option value="3">Magazine</option>
-                    <option value="4" id='other'>Other</option>
+                    <select class="selector-hear-option" id = 'select1' onchange="checkOther()">
+                    <option class='hear-option' value="" disabled selected hidden>Please Select</option>
+                    <option class='hear-option' value="0">None</option>
+                    <option class='hear-option' value="1">Newspaper</option>
+                    <option class='hear-option' value="2">Internet</option>
+                    <option class='hear-option' value="3">Magazine</option>
+                    <option class='hear-option' value="4">Other</option>
                 </select>
                 </div>
                 <div class="placeHolderError">
@@ -116,11 +116,11 @@
             <!-- end dropdown menu-how did you hear about us -->
 
             <!-- other -->
-            <section class="card">
-                <h2 class="cardTitle">Other <span class='req-filed'>*</span></h2>
+            <section class="inputPlaceHolder other">
+                <h2 class="inputPlaceHolderTitle">Other <span class='req-filed'>*</span></h2>
                 <div class="half-item">
-                    <input type="text" name="" id="">
-                    <label for=""></label>
+                    <input type="text" name="otherSpecifiy" id="otherSpecifiy">
+                    <label for="otherSpecifiy"></label>
                 </div>
                 <div class="placeHolderError">
                     <span class="errorSign"></span>
@@ -130,8 +130,8 @@
             <!-- end other -->
 
             <!-- feedback -->
-            <section class="card">
-                <h2 class="cardTitle">Feedback about us:</h2>
+            <section class="inputPlaceHolder">
+                <h2 class="inputPlaceHolderTitle">Feedback about us:</h2>
                 <div class="full-item">
                     <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
                 </div>
@@ -139,8 +139,8 @@
             <!-- end feedback -->
 
             <!-- suggestions -->
-            <section class="card">
-                <h2 class="cardTitle">Suggestion if any for further improvement:</h2>
+            <section class="inputPlaceHolder">
+                <h2 class="inputPlaceHolderTitle">Suggestion if any for further improvement:</h2>
                 <div class="full-item">
                     <textarea name="suggestion" id="suggestion" cols="30" rows="10"></textarea>
                 </div>
@@ -148,8 +148,8 @@
             <!-- end suggestions -->
 
             <!-- recommended -->
-            <section class="card">
-                <h2 class="cardTitle">Will you be willing to recommend us?</h2>
+            <section class="inputPlaceHolder">
+                <h2 class="inputPlaceHolderTitle">Will you be willing to recommend us?</h2>
                 <div class="half-item">
                     <label class="checkBoxStyle">
                         <input type="checkbox" >
@@ -177,7 +177,7 @@
             <!-- end recommended -->
 
             <!-- table -->
-            <h2 class="cardTitle">Please give reference of any two people whom you feel:</h2>
+            <h2 class="inputPlaceHolderTitle">Please give reference of any two people whom you feel:</h2>
             <table>
                 <tr>
                     <th></th>
