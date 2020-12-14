@@ -1,30 +1,32 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
+    background: rgb(236, 237, 243);
 }
 
 .form-wrapper {
     width: 700px;
-    background: #e7e7e7;
-    margin: 0 auto;
+    background: white;
+    margin: 80px auto;
 }
 
 header h1 {
-    margin:  0;
-    font-size: 20px;
-    padding: 20px;
-    border-bottom: 1px solid red;
+    margin: 0;
+    font-weight: 700;
+    font-size: 30px;
+    padding: 45px;
+    border-bottom: 1px solid rgb(215, 216, 225);
 }
 
 .form-data {
-    padding:  0 20px;
+    padding: 20px 20px;
 }
 
 .form-section {
     padding: 10px;
-    background: red;
-    margin:  10px 0;
+    margin: 10px 0 20px 0;
 }
 
 .form-input {
@@ -32,27 +34,216 @@ header h1 {
     flex-direction: column;
 }
 
+.form-input input,
+select,
+textarea {
+    border: 1px solid rgb(195, 202, 217);
+    padding: 10px;
+    border-radius: 3px;
+    margin-top: 6px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
 .title {
     font-weight: 600;
-    margin-bottom: 10px;
     display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .title.required::after {
-    content: "*";
+    content: " *";
     color: red;
 }
 
 .form-input .label {
+    margin: 12px 0 20px 0;
     font-size: 12px;
+    font-weight: 500;
+    color: rgb(87, 100, 126);
 }
 
 .inputs-wrapper {
+    margin-top: 4px;
     display: flex;
     justify-content: space-between;
 }
 
 .inputs-wrapper .form-input {
     width: calc(50% - 10px);
+}
+
+.inputs-wrapper input {
+    border: 1px solid rgb(195, 202, 217);
+    padding: 12px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.announcment-message {
+    background-color: rgb(242, 58, 60);
+    width: auto;
+    padding: 5px;
+    display: inline-flex;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.form-announcment {
+    color: white;
+    font-size: 12px;
+}
+
+.message-hidden {
+    display: none;
+}
+
+
+/* .form-announcment:before {
+    content: url(../old/error-24px.svg);
+    display: inline-block;
+} */
+
+
+/*classes for js*/
+
+.item-selected {
+    padding: 10px;
+    background: green;
+    margin: 10px 0;
+}
+
+
+/*
+Colors for design
+outer:rgb(236,237,243);
+line:rgb(215,216,225);
+error-selected:rgb(254,237,237);
+secondry-font:rgb(87,100,126);
+border:rgb(195,202,217);
+
+*/
+
+
+/*check box style*/
+
+.check-box-style {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.check-box-style input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.check-mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #ffffff;
+    border: 1px #c3cad9 solid;
+}
+
+.check-box-style:hover input~.check-mark {
+    background-color: #ccc;
+}
+
+.check-box-style input:checked~.check-mark {
+    background-color: rgb(46, 105, 255);
+}
+
+.check-mark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    border: none;
+}
+
+.check-box-style input:checked~.check-mark:after {
+    display: block;
+}
+
+.check-box-style .check-mark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/*end checkbox style*/
+
+
+/*Table*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px #c3cad9 solid;
+    padding: 15px 30px;
+}
+
+tr {
+    border: 1px #c3cad9 solid;
+}
+
+th {
+    padding: 15px 30px;
+    border: 1px #c3cad9 solid;
+    background-color: #e5eaf4;
+    font-weight: 500;
+    font-size: 12px;
+    color: black;
+}
+
+.hide-courner {
+    border: none;
+    background-color: white;
+}
+
+.align-left {
+    text-align: left;
+}
+
+
+/*Table end*/
+
+.btn-submit {
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #fff;
+    background-color: rgb(24, 189, 91);
+    padding: 10px 60px;
+}
+
+.form-submit {
+    padding: 10px;
+    margin: 10px 0 20px 0;
+}
+
+.hidden {
+    display: none;
 }
