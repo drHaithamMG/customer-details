@@ -1,211 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Customer Details</title>
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="styles/materialDesignFont.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/materialDesignFont.css" />
+  </head>
 
-<body>
-    <main class="main-element">
-        <form>
-            <header>
-                <h1>Customer Details:</h1>
-            </header>
-            <hr/>
-            <!-- Full name section -->
-            <section class="input-placeHolder">
-                <h2 class="inputPlaceHolderTitle">Full name <span class='req-filed'>*</span></h2>
-                <div class="half-item">
-                    <input class ="checkEneteredChar" type="text" name="first_name" id="fName">
-                    <label for="first_name">First Name</label>
-                </div>
-                <div class="half-item">
-                    <input class ="checkEneteredChar" type="text" name="last_name" id="lName">
-                    <label for="last_name">Last Name</label>
-                </div>
-                <div class="placeHolderError">
-                    <span class="errorSign"></span>
-                    <span class="errorText"></span>
-                </div>
-            </section>
-            <!-- end full name section -->
+  <body>
+      <div class="form-wrapper">
+          <header>
+              <h1>Customer Details:</h1>
+          </header>
+    
+          <form>
+              <div class="form-data">
+                  <div class="form-section">
+                    <span class="title required">Full Name</span>
+                    <div class="inputs-wrapper">
+                        <div class="form-input">
+                            <input type="text" />
+                            <span class="label">First Name</span>
+                        </div>
+                        <div class="form-input">
+                            <input type="text" />
+                            <span class="label">First Name</span>
+                        </div>
+                    </div>
+                  </div>
 
-            <!-- address section -->
-            <section class="inputPlaceHolder">
-                <h2 class="inputPlaceHolderTitle">Address <span class='req-filed'>*</span></h2>
-                <div class="full-item">
-                    <input type="text" name="streetAddress" id="stAddress">
-                    <label for="streetAddress">Street Address</label>
-                </div>
-                <div class="full-item">
-                    <input type="text" name="streetAddress2" id="stAddress2">
-                    <label for="streetAddress2">Street Address Line 2</label>
-                </div>
-                <div class="half-item">
-                    <input class ="city" type="text" name="city" id="city">
-                    <label for="city">City</label>
-                </div>
-                <div class="half-item">
-                    <input type="text" name="state-province" id="state">
-                    <label for="state-province">State/ Province</label>
-                </div>
-                <div class="full-item">
-                    <input class ='number' type="text" name="postal" id="postal">
-                    <label for="postal">Postal / Zip Code</label>
-                </div>
-                <div class="placeHolderError">
-                    <span class="errorSign"></span>
-                    <span class="errorText"></span>
-                </div>
-            </section>
-            <!-- end address section -->
+                  <div class="form-section">
+                    <span class="title required">Address</span>
+                    <div class="form-input">
+                        <input type="text" />
+                        <span class="label">Street Address</span>
+                    </div>
+                    <div class="form-input">
+                        <input type="text" />
+                        <span class="label">Street 2</span>
+                    </div>
+                    <div class="inputs-wrapper">
+                        <div class="form-input">
+                            <input type="text" />
+                            <span class="label">City</span>
+                        </div>
+                        <div class="form-input">
+                            <input type="text" />
+                            <span class="label">state</span>
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <input type="text" />
+                        <span class="label">Zip code</span>
+                    </div>
+                  </div>
 
-            <!-- phone number section -->
-            <section class="inputPlaceHolder">
-                <h2 class="inputPlaceHolderTitle">Phone number <span class='req-filed'>*</span></h2>
-                <div class="half-item">
-                    <input class ='number' placeholder="(000) 000-0000" type="text" name="phoneNum" id="phoneNumber">
+                  <div class="form-section">
+                    <span class="title required">Phone Number</span>
+                    <div class="form-input">
+                        <input type="text" />
+                    </div>
                 </div>
-                <div class="placeHolderError">
-                    <span class="errorSign"></span>
-                    <span class="errorText"></span>
-                </div>
-            </section>
-            <!-- end phone number section -->
-
-            <!-- email section -->
-            <section class="inputPlaceHolder">
-                <h2 class="inputPlaceHolderTitle">E-mail</h2>
-                <div class="half-item">
-                    <input class="email-validation" type="text" name="email" id="email">
-                    <label for="email">example@example.com</label>
-                </div>
-                <div class="placeHolderError">
-                    <span class="errorSign"></span>
-                    <span class="errorText"></span>
-                </div>
-            </section>
-            <!--end email section -->
-
-            <!-- dropdown menu-how did you hear about us -->
-            <section class="inputPlaceHolder">
-                <h2 class="inputPlaceHolderTitle">How did you hear about us? <span class='req-filed'>*</span></h2>
-                <div class="half-item">
-                    <select class="selector-hear-option" id = 'select1' onchange="checkOther()">
-                    <option class='hear-option' value="" disabled selected hidden>Please Select</option>
-                    <option class='hear-option' value="0">None</option>
-                    <option class='hear-option' value="1">Newspaper</option>
-                    <option class='hear-option' value="2">Internet</option>
-                    <option class='hear-option' value="3">Magazine</option>
-                    <option class='hear-option' value="4">Other</option>
-                </select>
-                </div>
-                <div class="placeHolderError">
-                    <span class="errorSign"></span>
-                    <span class="errorText"></span>
-                </div>
-            </section>
-            <!-- end dropdown menu-how did you hear about us -->
-
-            <!-- other -->
-            <section class="inputPlaceHolder other">
-                <h2 class="inputPlaceHolderTitle">Other <span class='req-filed'>*</span></h2>
-                <div class="half-item">
-                    <input type="text" name="otherSpecifiy" id="otherSpecifiy">
-                    <label for="otherSpecifiy"></label>
-                </div>
-                <div class="placeHolderError">
-                    <span class="errorSign"></span>
-                    <span class="errorText"></span>
-                </div>
-            </section>
-            <!-- end other -->
-
-            <!-- feedback -->
-            <section class="inputPlaceHolder">
-                <h2 class="inputPlaceHolderTitle">Feedback about us:</h2>
-                <div class="full-item">
-                    <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
-                </div>
-            </section>
-            <!-- end feedback -->
-
-            <!-- suggestions -->
-            <section class="inputPlaceHolder">
-                <h2 class="inputPlaceHolderTitle">Suggestion if any for further improvement:</h2>
-                <div class="full-item">
-                    <textarea name="suggestion" id="suggestion" cols="30" rows="10"></textarea>
-                </div>
-            </section>
-            <!-- end suggestions -->
-
-            <!-- recommended -->
-            <section class="inputPlaceHolder">
-                <h2 class="inputPlaceHolderTitle">Will you be willing to recommend us?</h2>
-                <div class="half-item">
-                    <label class="checkBoxStyle">
-                        <input type="checkbox" >
-                        <span class="checkmark"></span>
-                        Yes
-                      </label>
-
-                    <label class="checkBoxStyle">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Maybe
-                      </label>
-
-                    <label class="checkBoxStyle">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        No
-                      </label>
-                </div>
-                <div class="placeHolderError">
-                    <span class="errorSign"></span>
-                    <span class="errorText"></span>
-                </div>
-            </section>
-            <!-- end recommended -->
-
-            <!-- table -->
-            <h2 class="inputPlaceHolderTitle">Please give reference of any two people whom you feel:</h2>
-            <table>
-                <tr>
-                    <th></th>
-                    <th>Full name</th>
-                    <th>Address</th>
-                    <th>Contact number</th>
-                </tr>
-                <tr>
-                    <th>1</th>
-                    <td name="user1FullName" id="user1FullName"></td>
-                    <td name="user1Address" id="user1Address"></td>
-                    <td name="user1Number" id="user1Number"></td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td name="user2FullName" id="user2FullName"></td>
-                    <td name="user2Address" id="user2Address"></td>
-                    <td name="user2Number" id="user2Number"></td>
-                </tr>
-            </table>
-            <!-- end table -->
-            <hr>
-            <button type="button" id='submit-btn'>Submit</button>
-            <!-- end form -->
-        </form>
-    </main>
+              </div>
+              <div class="form-submit"></div>
+          </form>
+      </div>
 
     <script src="scripts/script.js"></script>
-</body>
-
+  </body>
 </html>
