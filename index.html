@@ -7,7 +7,8 @@
     <title>Customer Details</title>
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="styles/materialDesignFont.css" />
 </head>
@@ -17,26 +18,24 @@
         <header>
             <h1>Customer Details:</h1>
         </header>
-
-        <form>
-            <div class="form-data">
+        <form class="person-form">
+            <div class="form-data ">
                 <!-- Full name -->
                 <div class="form-section">
                     <span class="title required">Full Name</span>
                     <div class="inputs-wrapper">
                         <div class="form-input">
-                            <input type="text" name="first-name" id="fName" class="check-entered-char" />
+                            <input type="text" placeholder="ex: John" name="first-name" id="fName"
+                                class="check-entered-char full-name-checker" />
                             <span class="label">First Name</span>
                         </div>
                         <div class="form-input">
-                            <input type="text" class="check-entered-char" type="text" name="last-name" id="lName" />
+                            <input type="text" placeholder="ex: Smith" class="check-entered-char full-name-checker" type="text"
+                                name="last-name" id="lName" />
                             <span class="label">Last Name</span>
                         </div>
                     </div>
-                    <div class="announcment-message message-hidden">
-                        <span class="form-announcment">This field is required.&MediumSpace;</span>
-                    </div>
-
+                  
 
                 </div>
                 <!-- end full name -->
@@ -45,30 +44,28 @@
                 <div class="form-section">
                     <span class="title required">Address</span>
                     <div class="form-input">
-                        <input type="text" />
+                        <input type="text" class="check-address" name="address-1" />
                         <span class="label">Street Address</span>
                     </div>
                     <div class="form-input">
-                        <input type="text" />
+                        <input type="text" class="check-address" name="address-2" />
                         <span class="label">Street Address Line 2</span>
                     </div>
                     <div class="inputs-wrapper">
                         <div class="form-input">
-                            <input type="text" class="city" type="text" name="city" id="city" />
+                            <input type="text" class="city check-address " type="text" name="city" id="city" />
                             <span class="label">City</span>
                         </div>
                         <div class="form-input">
-                            <input type="text" name="state-province" id="state" />
+                            <input type="text" name="state-province" id="state" class="check-address" />
                             <span class="label">State/ Province</span>
                         </div>
                     </div>
                     <div class="form-input">
-                        <input type="text" class="number" name="postal" id="postal" />
+                        <input type="text" class="number check-address" name="postal" id="postal" />
                         <span class="label">Zip code</span>
                     </div>
-                    <div class="announcment-message message-hidden">
-                        <span class="form-announcment">This field is required.&MediumSpace;</span>
-                    </div>
+                   
                 </div>
                 <!-- end address -->
 
@@ -76,7 +73,8 @@
                     <span class="title required">Phone Number</span>
                     <div class="inputs-wrapper">
                         <div class="form-input">
-                            <input class="number" placeholder="(000) 000-0000" type="text" name="phone-num" id="phone-number" />
+                            <input class="number check-phone-number" placeholder="(000) 000-0000" type="text" name="phone-num"
+                                id="phone-number" />
                         </div>
                     </div>
                 </div>
@@ -86,13 +84,12 @@
                     <div class="inputs-wrapper">
                         <div class="form-input">
 
-                            <input class="email-validation" type="text" name="email" id="email" placeholder="ex: info@mughrabi.io" />
+                            <input class="email-validation" type="text" name="email" id="email"
+                                placeholder="ex: info@mughrabi.io" />
                             <span class="label">example@example.com</span>
                         </div>
                     </div>
-                    <div class="announcment-message  message-hidden">
-                        <span class="form-announcment">Enter a valid e-mail address&MediumSpace;</span>
-                    </div>
+                   
                 </div>
                 <hr>
 
@@ -100,72 +97,70 @@
                     <span class="title required">How did you hear about us?</span>
                     <div class="inputs-wrapper">
                         <div class="form-input">
-                            <select class="selector-hear-option" id="select1" onchange="checkOther()">
-                <option class="hear-option" value="" disabled selected hidden>
-                  Please Select
-                </option>
-                <option class="hear-option" value="0">None</option>
-                <option class="hear-option" value="1">Newspaper</option>
-                <option class="hear-option" value="2">Internet</option>
-                <option class="hear-option" value="3">Magazine</option>
-                <option class="hear-option" value="4">Other</option>
-              </select>
+                            <select class="selector-hear-option submitted-data" name="find-method" id="select1"
+                                onchange="checkOther()">
+                                <option class="hear-option" value="" disabled selected hidden>
+                                    Please Select
+                                </option>
+                                <option class="hear-option" value="0">None</option>
+                                <option class="hear-option" value="1">Newspaper</option>
+                                <option class="hear-option" value="2">Internet</option>
+                                <option class="hear-option" value="3">Magazine</option>
+                                <option class="hear-option" value="4">Other</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="announcment-message message-hidden">
-                        <span class="form-announcment">This field is required.&MediumSpace;</span>
-                    </div>
+                    
                 </div>
 
                 <div class="form-section hidden">
                     <span class="title required">Other</span>
                     <div class="inputs-wrapper">
                         <div class="form-input">
-                            <input type="text" />
+                            <input type="text" class="submitted-data" name="other-description" />
                         </div>
                     </div>
-                    <div class="announcment-message message-hidden">
-                        <span class="form-announcment">This field is required.&MediumSpace;</span>
-                    </div>
+                    
                 </div>
 
                 <div class="form-section">
                     <span class="title ">Feedback about us:</span>
                     <div class="form-input">
-                        <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+                        <textarea name="feedback" id="feedback" cols="30" rows="7" class="submitted-data"
+                            placeholder="Write your generous feedback here..."></textarea>
                     </div>
                 </div>
 
                 <div class="form-section">
                     <span class="title "> Suggestion if any for further improvement:</span>
                     <div class="form-input">
-                        <textarea name="suggestion" id="suggestion" cols="30" rows="10">
-                            </textarea>
+                        <textarea name="suggestion" id="suggestion" cols="30" rows="7" class="submitted-data"
+                            placeholder="Write your generous suggestion here..."></textarea>
                     </div>
                 </div>
 
                 <div class="form-section">
-                    <span class="title ">  Will you be willing to recommend us?</span>
+                    <span class="title "> Will you be willing to recommend us?</span>
                     <div class="inputs-wrapper">
                         <div class="form-input">
 
                             <label class="check-box-style">
-                <input type="checkbox" />
-                <span class="check-mark"></span>
-                Yes
-              </label>
+                                <input type="checkbox" name='yes' value="yes" class="submitted-data" />
+                                <span class="check-mark"></span>
+                                <span class="check-choice ">Yes</span>
+                            </label>
 
                             <label class="check-box-style">
-                <input type="checkbox" />
-                <span class="check-mark"></span>
-                Maybe
-              </label>
+                                <input type="checkbox" name='maybe' value="maybe" class="submitted-data" />
+                                <span class="check-mark"></span>
+                                <span class="check-choice">Maybe</span>
+                            </label>
 
                             <label class="check-box-style">
-                <input type="checkbox" />
-                <span class="check-mark"></span>
-                No
-              </label>
+                                <input type="checkbox" name='no' value="no" class="submitted-data" />
+                                <span class="check-mark"></span>
+                                <span class="check-choice ">No</span>
+                            </label>
                         </div>
 
                     </div>
@@ -183,32 +178,33 @@
                         </tr>
                         <tr>
                             <th class='align-left'>1</th>
-                            <td name="user1FullName" id="user1FullName"></td>
-                            <td name="user1Address" id="user1Address"></td>
-                            <td name="user1Number" id="user1Number"></td>
+                            <td class="table-td "><input class="submitted-data" name="user1FullName" id="user1FullName"
+                                    placeholder="ex: Diff Brown" type="text"></td>
+                            <td class="table-td "><input class="submitted-data"  name="user1Address" id="user1Address"
+                                    placeholder="ex: CA, United States" type="text"></td>
+                            <td class="table-td "><input class=" number submitted-data"  name="user1Number" id="user1Number"
+                                    placeholder="ex: (000) 000-0000" type="text"></td>
                         </tr>
                         <tr>
                             <th class="align-left">2</th>
-                            <td name="user2FullName" id="user2FullName"></td>
-                            <td name="user2Address" id="user2Address"></td>
-                            <td name="user2Number" id="user2Number"></td>
+                            <td class="table-td "><input class="submitted-data" name="user2FullName" id="user2FullName" 
+                                    placeholder="ex: Diff Brown" type="text"></td>
+                            <td class="table-td "><input class="submitted-data" name="user2Address" id="user2Address" 
+                                    placeholder="ex: CA, United States" type="text"></td>
+                            <td class="table-td number"><input class="submitted-data"  name="user2Number" id="user2Number"
+                                    placeholder="ex: (000) 000-0000" type="text"></td>
                         </tr>
                     </table>
                 </div>
 
             </div>
             <div class="form-submit">
-                <div class="form-section">
-                    <div class="inputs-wrapper">
-                        <button class="btn-submit" type="button" id="submit-btn">Submit</button>
-                    </div>
+                <button class="btn-submit" type="submit" id="submit-btn">Submit</button>
 
-
-                </div>
         </form>
-        </div>
+    </div>
 
-        <script src="scripts/script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 // Prevent user from entering white spaces on first/last name field
-document.querySelectorAll('.checkEneteredChar').forEach(item => {
+document.querySelectorAll('.check-entered-char').forEach(item => {
         item.addEventListener('keypress', function(event) {
             let key = event.keyCode;
             if (key === 32) {
@@ -53,5 +53,70 @@ function checkOther() {
         other.style.display = 'none';
     }
 
+}
+/*Listeners*/
+document.querySelectorAll('.full-name-checker').forEach((dataInput) => {
+    dataInput.addEventListener('focus',()=>{
+        const mainParent=dataInput.closest('.form-section');
+            mainParent.classList.remove('form-section-error');
+    })
+});
+document.querySelectorAll('.check-address').forEach((dataInput) => {
+    dataInput.addEventListener('focus',()=>{
+        const mainParent=dataInput.closest('.form-section');
+            mainParent.classList.remove('form-section-error');
+    })
+});
+document.querySelectorAll('.check-phone-number').forEach((dataInput) => {
+    dataInput.addEventListener('focus',()=>{
+        const mainParent=dataInput.closest('.form-section');
+            mainParent.classList.remove('form-section-error');
+    })
+});
+/*end listeners*/
+
+const personForm = document.getElementsByClassName('person-form')[0];
+let isItOkayToSubmit=false;
+let data={};
+personForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    /*collecting data*/
+    const selectors=['.full-name-checker','.check-address','.check-phone-number'].forEach(selector=>checkRequired(selector));
+    const email=checkEmail();
+    if(isItOkayToSubmit==true){
+        console.log(data);
+    }
+    
+    
+});
+function checkRequired(selector){
+    const fullName={};
+    document.querySelectorAll(selector).forEach((dataInput) => {
+        if (dataInput.value == '') {
+            const mainParent=dataInput.closest('.form-section');
+            mainParent.classList.add('form-section-error');
+            isItOkayToSubmit=false;
+        }
+        else{
+            isItOkayToSubmit=true;
+        data[dataInput.name]=dataInput.value;
+        }
+    });
+    return fullName;
+}
+function checkEmail(){
 
 }
+
+
+/*
+document.querySelectorAll('.fullNameChecker').forEach((dataInput) => {
+            if (dataInput.value == '') {
+                const mainParent=dataInput.closest('.form-section');
+                mainParent.classList.add('form-section-error');
+                // mainParent.setAttribute('class','ok')
+                // console.log(dataInput.closest('.form-section'));
+                               
+            }
+        })
+*/
