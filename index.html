@@ -30,12 +30,12 @@
                             <span class="label">First Name</span>
                         </div>
                         <div class="form-input">
-                            <input type="text" placeholder="ex: Smith" class="check-entered-char full-name-checker" type="text"
-                                name="last-name" id="lName" />
+                            <input type="text" placeholder="ex: Smith" class="check-entered-char full-name-checker"
+                                type="text" name="last-name" id="lName" />
                             <span class="label">Last Name</span>
                         </div>
                     </div>
-                  
+
 
                 </div>
                 <!-- end full name -->
@@ -65,7 +65,7 @@
                         <input type="text" class="number check-address" name="postal" id="postal" />
                         <span class="label">Zip code</span>
                     </div>
-                   
+
                 </div>
                 <!-- end address -->
 
@@ -73,8 +73,8 @@
                     <span class="title required">Phone Number</span>
                     <div class="inputs-wrapper">
                         <div class="form-input">
-                            <input class="number check-phone-number" placeholder="(000) 000-0000" type="text" name="phone-num"
-                                id="phone-number" />
+                            <input class="number check-phone-number" placeholder="(000) 000-0000" type="text"
+                                name="phone-num" id="phone-number" />
                         </div>
                     </div>
                 </div>
@@ -83,13 +83,12 @@
                     <span class="title ">Email</span>
                     <div class="inputs-wrapper">
                         <div class="form-input">
-
                             <input class="email-validation" type="text" name="email" id="email"
                                 placeholder="ex: info@mughrabi.io" />
                             <span class="label">example@example.com</span>
                         </div>
                     </div>
-                   
+
                 </div>
                 <hr>
 
@@ -97,8 +96,7 @@
                     <span class="title required">How did you hear about us?</span>
                     <div class="inputs-wrapper">
                         <div class="form-input">
-                            <select class="selector-hear-option submitted-data" name="find-method" id="select1"
-                                onchange="checkOther()">
+                            <select class="selector-hear-option selector-value" name="find-method" id="select1">
                                 <option class="hear-option" value="" disabled selected hidden>
                                     Please Select
                                 </option>
@@ -110,23 +108,23 @@
                             </select>
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <div class="form-section hidden">
                     <span class="title required">Other</span>
                     <div class="inputs-wrapper">
-                        <div class="form-input">
-                            <input type="text" class="submitted-data" name="other-description" />
+                        <div class="form-input ">
+                            <input class="other-check" type="text" name="other-description" />
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <div class="form-section">
                     <span class="title ">Feedback about us:</span>
                     <div class="form-input">
-                        <textarea name="feedback" id="feedback" cols="30" rows="7" class="submitted-data"
+                        <textarea name="feedback" id="feedback" cols="30" rows="7" class="submitted-data optional"
                             placeholder="Write your generous feedback here..."></textarea>
                     </div>
                 </div>
@@ -134,7 +132,7 @@
                 <div class="form-section">
                     <span class="title "> Suggestion if any for further improvement:</span>
                     <div class="form-input">
-                        <textarea name="suggestion" id="suggestion" cols="30" rows="7" class="submitted-data"
+                        <textarea name="suggestion" id="suggestion" cols="30" rows="7" class="submitted-data optional"
                             placeholder="Write your generous suggestion here..."></textarea>
                     </div>
                 </div>
@@ -145,19 +143,19 @@
                         <div class="form-input">
 
                             <label class="check-box-style">
-                                <input type="checkbox" name='yes' value="yes" class="submitted-data" />
+                                <input type="checkbox" name='yes' value="yes" class="submitted-data optional" />
                                 <span class="check-mark"></span>
                                 <span class="check-choice ">Yes</span>
                             </label>
 
                             <label class="check-box-style">
-                                <input type="checkbox" name='maybe' value="maybe" class="submitted-data" />
+                                <input type="checkbox" name='maybe' value="maybe" class="optional" />
                                 <span class="check-mark"></span>
                                 <span class="check-choice">Maybe</span>
                             </label>
 
                             <label class="check-box-style">
-                                <input type="checkbox" name='no' value="no" class="submitted-data" />
+                                <input type="checkbox" name='no' value="no" class="optional" />
                                 <span class="check-mark"></span>
                                 <span class="check-choice ">No</span>
                             </label>
@@ -178,29 +176,31 @@
                         </tr>
                         <tr>
                             <th class='align-left'>1</th>
-                            <td class="table-td "><input class="submitted-data" name="user1FullName" id="user1FullName"
+                            <td class="table-td "><input class="optional" name="user1FullName" id="user1FullName"
                                     placeholder="ex: Diff Brown" type="text"></td>
-                            <td class="table-td "><input class="submitted-data"  name="user1Address" id="user1Address"
+                            <td class="table-td "><input class="optional" name="user1Address" id="user1Address"
                                     placeholder="ex: CA, United States" type="text"></td>
-                            <td class="table-td "><input class=" number submitted-data"  name="user1Number" id="user1Number"
-                                    placeholder="ex: (000) 000-0000" type="text"></td>
+                            <td class="table-td "><input class=" number optional" name="user1Number"
+                                    id="user1Number" placeholder="ex: (000) 000-0000" type="text"></td>
                         </tr>
                         <tr>
                             <th class="align-left">2</th>
-                            <td class="table-td "><input class="submitted-data" name="user2FullName" id="user2FullName" 
+                            <td class="table-td "><input class="optional" name="user2FullName" id="user2FullName"
                                     placeholder="ex: Diff Brown" type="text"></td>
-                            <td class="table-td "><input class="submitted-data" name="user2Address" id="user2Address" 
+                            <td class="table-td "><input class="optional" name="user2Address" id="user2Address"
                                     placeholder="ex: CA, United States" type="text"></td>
-                            <td class="table-td number"><input class="submitted-data"  name="user2Number" id="user2Number"
-                                    placeholder="ex: (000) 000-0000" type="text"></td>
+                            <td class="table-td number"><input class="optional" name="user2Number"
+                                    id="user2Number" placeholder="ex: (000) 000-0000" type="text"></td>
                         </tr>
                     </table>
                 </div>
 
             </div>
             <div class="form-submit">
+                
                 <button class="btn-submit" type="submit" id="submit-btn">Submit</button>
-
+            </div>
+            
         </form>
     </div>
 
